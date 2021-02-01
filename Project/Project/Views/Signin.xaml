@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Project.Views.Signin"
+             NavigationPage.HasNavigationBar="false">
+  
+    <ContentPage.Content>
+        <Grid BackgroundColor="Black">
+            <StackLayout Padding="0" Margin="0">
+                <Frame BackgroundColor="Black" HeightRequest="130" HorizontalOptions="FillAndExpand">
+                    <Label Text="dd" TextColor="White"></Label>
+                </Frame>
+            </StackLayout>
+
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350">
+                <pan:PancakeView BackgroundColor="White"  HeightRequest="400" HorizontalOptions="FillAndExpand" CornerRadius="50,50,50,50">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Giriş Yap" TextColor="Black" FontSize="30" FontAttributes="Bold" Margin="0,20,0,0" />
+                        </StackLayout>
+
+
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,0,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+
+                                    <Entry x:Name="uMail" Placeholder="E-mail" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,5,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" >
+
+                                    <Entry x:Name="uPass" Placeholder="Password" IsPassword="True" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal">
+                            <CheckBox IsChecked="False" Color="DarkGray"/>
+                            <Label Text="Beni Hatırla" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+                            <Label x:Name="ForgorPass" Text="Şifremi Unuttum" TextColor="Black"  HorizontalOptions="CenterAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" >
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+
+                        </StackLayout>
+
+                        <Button x:Name="LoginButton" Clicked="Signin_Clicked" Text="Giriş Yap" BackgroundColor="DarkTurquoise" Margin="50,5,50,0" TextColor="White" FontAttributes="Bold" CornerRadius="30"/>
+
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" Margin="5">
+                            <Label Text="Hala Üye Olmadın mı ?" TextColor="DarkGray" FontSize="Small"/>
+                            <Label x:Name="signup"  Text="Üye Ol" TextColor="Black" FontAttributes="Bold" FontSize="Small">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Label.GestureRecognizers>
+
+                            </Label>
+                        </StackLayout>
+
+                        <ActivityIndicator x:Name="indicator"
+                                   VerticalOptions="Center"
+                                   HorizontalOptions="Center" 
+                                   BackgroundColor="Transparent"
+                                   Color="DarkGray"
+                                    Scale="0.5"/>
+
+                    </StackLayout>
+                   
+                </pan:PancakeView>
+
+            </StackLayout>
+
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

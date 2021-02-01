@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Project.Views.Tabbed"
+             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" xmlns:z="clr-namespace:z.Views" xmlns:Project="clr-namespace:Project.Views"
+             android:TabbedPage.ToolbarPlacement="Bottom"
+             BarBackgroundColor="Turquoise"
+             BarTextColor="White" 
+             android:TabbedPage.BarItemColor="#66FFFFFF"
+             android:TabbedPage.BarSelectedItemColor="Black"
+             NavigationPage.HasNavigationBar="false">
+
+
+    <TabbedPage.Children>
+        <Project:MainPage Title="Harita" IconImageSource="worldwide.png" />
+        <Project:Message Title="Mesaj" IconImageSource="chat.png"/>
+        <Project:Notification Title="Bildirimler" IconImageSource="notifications.png"/>
+        <Project:Profile Title="Profil" IconImageSource="user.png"/>
+    </TabbedPage.Children>
+
+
+
+
+
+
+
+
+
+
+
+
+</TabbedPage>

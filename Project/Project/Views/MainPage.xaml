@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps"
+             x:Class="Project.Views.MainPage"
+             NavigationPage.HasNavigationBar="false">
+    <ContentPage.Content>
+        <Grid>
+            <maps:Map
+            x:Name="MyMap"
+            IsShowingUser="true"
+            MapType="Street"
+               />
+          <Button BackgroundColor="DarkGray" Clicked="Button_Clicked"  WidthRequest="40" HeightRequest="40" ImageSource="plus.png"  VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" CornerRadius="100" /> 
+
+      <!--      <ImageButton x:Name="ImageButton_Round"
+                WidthRequest="40"
+                HeightRequest="40"
+                CornerRadius="20"
+                Source="plus.png"/>
+
+            -->
+        </Grid>
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>

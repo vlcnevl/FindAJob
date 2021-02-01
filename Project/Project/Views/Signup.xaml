@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:pan="clr-namespace:Xamarin.Forms.PancakeView;assembly=Xamarin.Forms.PancakeView"
+             x:Class="Project.Views.Signup"
+             NavigationPage.HasNavigationBar="false">
+  
+    
+    <ContentPage.Content>
+        <Grid BackgroundColor="Black">
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="350" >
+                <pan:PancakeView BackgroundColor="White"  HeightRequest="500" HorizontalOptions="FillAndExpand" CornerRadius="50,50,50,50">
+                    <StackLayout>
+                        <StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="Üye Ol" TextColor="Black" FontSize="30" FontAttributes="Bold" Margin="0,20,0,0" />
+                        </StackLayout>
+
+
+                        <StackLayout Margin="0,25,0,0">
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,0,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+
+                                    <Entry x:Name="lblUserEmail" Keyboard="Email" Placeholder="E-mail" Text="{Binding Email, StringFormat= 'User Email-Id: {0:F0}'}" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,5,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" >
+
+                                    <Entry x:Name="lblUserName" Placeholder="Adınız" Text="{Binding Name,  StringFormat= 'User Name: {0:F0}'}" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,0,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0">
+
+                                    <Entry x:Name="lblUserSurname"  Placeholder="Soyadınız" Text="{Binding Email, StringFormat= 'User Email-Id: {0:F0}'}" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,5,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" >
+
+                                    <Entry x:Name="lblAdress" Placeholder="Adres" Text="{Binding Address, StringFormat= 'User Address: {0:F0}'}"  TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                            
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,5,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" >
+
+                                            <Entry  x:Name="lblMobile" Placeholder="Şifre" Keyboard="Telephone" Text="{Binding Mobile,  StringFormat= 'User Mobile No: {0:F0}'}" IsPassword="True" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="DarkGray" Padding="0" Margin="50,5,50,0" CornerRadius="50" HorizontalOptions="FillAndExpand">
+                                <StackLayout Orientation="Horizontal" Margin="20,0,20,0" >
+
+                                    <Entry  x:Name="lblUserPassword" Placeholder="Şifre" Text="{Binding Password, StringFormat= 'User Password: {0:F0}'}" IsPassword="True" TextColor="Black" HorizontalOptions="FillAndExpand" HorizontalTextAlignment="Center"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+
+
+
+                        <Button Clicked="Button_Clicked"  x:Name="Register"  Text="Üye Ol" BackgroundColor="DarkTurquoise" Margin="50,5,50,0" TextColor="White" FontAttributes="Bold" CornerRadius="30"/>
+
+                    </StackLayout>
+                </pan:PancakeView>
+
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>
